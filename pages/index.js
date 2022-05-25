@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import CreatorInfos from '../components/CreatorInfos';
+import CreatorInfos from '../components/CreatorInfos/CreatorInfos';
 import styles from '../styles/Home.module.scss';
 
 const Home = () => {
