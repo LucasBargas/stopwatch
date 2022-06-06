@@ -6,6 +6,7 @@ const CreatorInfos = () => {
       <p>
         Este cronômetro foi desenvolvido com <span>♥</span> por <a href="https://projetoslucasbargas.com/" target="_blank" rel="noopener noreferrer">Lucas Bargas</a>
       </p>
+      <a href="https://github.com/LucasBargas/stopwatch" target="_blank" rel="noopener noreferrer">Clique aqui para visualizar o repositótio no GitHub</a>
     </section>
   )
 }
