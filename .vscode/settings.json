@@ -6,7 +6,7 @@
     ".gitignore": true,
     "package.json": false,
     "package-lock.json": true,
-    ".next": true,
+    ".next": false,
     ".eslintrc.json": true,
     "README.md": true,
   }
