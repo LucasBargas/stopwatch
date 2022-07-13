@@ -1,6 +1,7 @@
-import styles from './CreatorInfos.module.scss';
+import React from 'react';
+import styles from './styles.module.scss';
 
-const CreatorInfos = () => {
+const CreatorInfos = (): JSX.Element => {
   return (
     <section className={styles.CreatorInfosContainer}>
       <p>

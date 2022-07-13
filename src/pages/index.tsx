@@ -1,13 +1,13 @@
 import React, { useState, useRef } from 'react';
-import CreatorInfos from '../components/CreatorInfos/CreatorInfos';
+import CreatorInfos from '../components/CreatorInfos';
 import styles from '../styles/Home.module.scss';
 
-const Home = () => {
-  const timerRef = useRef();
-  let [seconds, setSeconds] = useState(0);
+const Home = (): JSX.Element => {
+  const timerRef = useRef<HTMLParagraphElement>();
+  let [seconds, setSeconds] = useState<number>(0);
   let [timer, setTimer] = useState(undefined);
 
-  const createHoursOfSeconds = (seconds) => {
+  const createHoursOfSeconds = (seconds: number): string => {
     const data = new Date(seconds * 1000);
     return data.toLocaleTimeString('pt-BR', {
       hour12: false,
@@ -15,19 +15,19 @@ const Home = () => {
     });
   }
 
-  const startTimer = () => {
+  const startTimer = (): void => {
     setTimer(timer = setInterval(() => {
       setSeconds(seconds++);
       timerRef.current.innerText = createHoursOfSeconds(seconds);
     }, 1000))
   }
 
-  const handleClickOnStart = () => {
+  const handleClickOnStart = (): void => {
     setTimer(clearInterval(timer));
     startTimer();
   }
 
-  const handleClickOnClear = () => {
+  const handleClickOnClear = (): void => {
     setTimer(clearInterval(timer));
     timerRef.current.innerText = '00:00:00';
     setSeconds(0);

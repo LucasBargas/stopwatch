@@ -4,7 +4,7 @@
     ".vscode": true,
     ".git": true,
     ".gitignore": true,
-    "package.json": true,
+    "package.json": false,
     "package-lock.json": true,
     ".next": true,
     ".eslintrc.json": true,
