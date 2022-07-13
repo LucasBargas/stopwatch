@@ -16,7 +16,7 @@ const Home = (): JSX.Element => {
   }
 
   const startTimer = (): void => {
-    setTimer(timer = setInterval(() => {
+    setTimer(timer = setInterval((): void => {
       setSeconds(seconds++);
       timerRef.current.innerText = createHoursOfSeconds(seconds);
     }, 1000))
