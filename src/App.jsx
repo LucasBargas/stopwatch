@@ -1,13 +1,13 @@
-import React, { useState, useRef } from 'react';
-import CreatorInfos from '../components/CreatorInfos';
-import styles from '../styles/Home.module.scss';
+import React, { useState } from 'react';
+import CreatorInfos from './components/CreatorInfos';
+import styles from './App.module.scss';
 
-const Home = (): JSX.Element => {
-  const timerRef = useRef<HTMLParagraphElement>();
-  let [seconds, setSeconds] = useState<number>(0);
-  let [timer, setTimer] = useState(undefined);
+const App = () => {
+  const [timerValue, setTimerValue] = useState('00:00:00');
+  let [seconds, setSeconds] = useState(0);
+  const [timer, setTimer] = useState(0);
 
-  const createHoursOfSeconds = (seconds: number): string => {
+  const createHoursOfSeconds = (seconds) => {
     const data = new Date(seconds * 1000);
     return data.toLocaleTimeString('pt-BR', {
       hour12: false,
@@ -15,21 +15,21 @@ const Home = (): JSX.Element => {
     });
   }
 
-  const startTimer = (): void => {
-    setTimer(timer = setInterval((): void => {
+  const startTimer = () => {
+    setTimer(setInterval(() => {
       setSeconds(seconds++);
-      timerRef.current.innerText = createHoursOfSeconds(seconds);
+      setTimerValue(createHoursOfSeconds(seconds));
     }, 1000))
   }
 
-  const handleClickOnStart = (): void => {
+  const handleClickOnStart = () => {
     setTimer(clearInterval(timer));
     startTimer();
   }
 
-  const handleClickOnClear = (): void => {
+  const handleClickOnClear = () => {
     setTimer(clearInterval(timer));
-    timerRef.current.innerText = '00:00:00';
+    setTimerValue('00:00:00');
     setSeconds(0);
   }
 
@@ -38,7 +38,7 @@ const Home = (): JSX.Element => {
       <div className={styles.stopWatchArea}>
         <h1>CRONÔMETRO</h1>
 
-        <p ref={timerRef} className={styles.timer}>00:00:00</p>
+        <p className={styles.timer}>{timerValue}</p>
 
         <div className={styles.stopWatchButtons}>
           <button onClick={handleClickOnStart} className={styles.startButton}>Iniciar</button>
@@ -52,4 +52,4 @@ const Home = (): JSX.Element => {
   )
 }
 
-export default Home;
+export default App;
