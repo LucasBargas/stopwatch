@@ -7,8 +7,7 @@ Este projeto de **Cronômetro** foi desenvolvido por mim, Lucas Bargas, com base
 ### Principais recursos do App
 * Iniciar, pausar e limpar cronômeto.
 
-### Tecnologias utilizadas
-#### Front end
+### Tecnologias utilizadas no Front end
 * Reactjs;
 * Hooks;
 * SASS.
