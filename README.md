@@ -11,4 +11,4 @@ Este projeto de **Cronômetro** foi desenvolvido por mim, Lucas Bargas, com base
 #### Front end
 * Reactjs;
 * Hooks;
-* SASS;
+* SASS.
