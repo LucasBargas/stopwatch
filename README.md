@@ -5,7 +5,7 @@ Este projeto de **Cronômetro** foi desenvolvido por mim, Lucas Bargas, com base
 <https://stopwatch-lucasbargas.vercel.app/>
 
 ### Principais recursos do App
-* Iniciar, pausar e limpar cronômeto;
+* Iniciar, pausar e limpar cronômeto.
 
 ### Tecnologias utilizadas
 #### Front end
